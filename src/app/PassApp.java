@@ -205,7 +205,7 @@ public class PassApp extends RSA{
 		panel.add(decrypt);
 		panel.add(inst1);
 		panel.add(inst2);
-		panel.add(inst3);
+		panel.add(inst3); 
 		frame.add(panel);
 		frame.setVisible(true);
 	}
