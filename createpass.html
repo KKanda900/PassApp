@@ -7,20 +7,32 @@
   <link rel="stylesheet" href="main.css">
 
 </head>
+
 <body>
-  
+
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="manager.html">Password Management</a>
     <a href="createpass.html">Create a New Password</a>
   </div>
 
+
   <h1>Create a New Password</h1>
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Options</span>
 
-  
+  <div class="center_content">
+    <label for="length">Enter Password Length:</label><br>
+    <input type="text" id="length" name="pass_length" value="Password Length"><br><br>
+    <button class="center_content">Generate Password</button><br><br>
+    <label for="generated">Generated Password:</label><br>
+    <input type="text" id="generated" name="gen_password" value="Password"><br><br>
+  </div>
 
-  
+
+
+
+
+
 
 </body>
 
