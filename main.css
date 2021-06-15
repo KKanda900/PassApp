@@ -11,6 +11,39 @@ body {
   height: 100vh;
 }
 
+.left_banner {
+  margin-right: 25px;
+  font-family: "Poppings", sans-serif;
+  color:#FB667A;
+  border: #0d0d0d solid;
+  border-color: white;
+  background-color: white;
+  height: 200;
+  width: 200;
+}
+
+.center_banner {
+  margin: auto;
+  font-family: "Poppings", sans-serif;
+  color:#FB667A;
+  border: #0d0d0d solid;
+  border-color: white;
+  background-color: white;
+  height: 200;
+  width: 200;
+}
+
+.right_banner {
+  margin-left: auto;
+  font-family: "Poppings", sans-serif;
+  color:#FB667A;
+  border: #0d0d0d solid;
+  border-color: white;
+  background-color: white;
+  height: 200;
+  width: 200;
+}
+
 a {
   color: #92badd;
   display:inline-block;
