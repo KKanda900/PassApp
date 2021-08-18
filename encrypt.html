@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>Encrypt Password</title>
+
+    <link rel="stylesheet" href="main.css">
+    <script src="https://peterolson.github.io/BigInteger.js/BigInteger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script type="text/javascript" src="encrypt.js"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>PassApp</h2>
+            <ul>
+                <li><a href="main.html"><i class="The Vault"></i>The Vault</a></li>
+                <li><a href="generate.html"><i class="Generate Password"></i>Generate Password</a></li>
+                <li><a href="encrypt.html"><i class="Encrypt Password"></i>Encrypt Password</a></li>
+                <li><a href="decrypt.html"><i class="Decrypt Password"></i>Decrypt Password</a></li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <h1 style="margin-bottom: 50px;">Encrypt the Password</h1>
+            <label for="Password to Encrypt">Enter the Password Here: </label>
+            <input type="text" id="pass2encrypt" name="password to encrypt"><br><br>
+            <label for="phi">Phi: </label>
+            <input type="text" id="phi" name=""><br><br>
+            <label for="e">e: </label>
+            <input type="text" id="e" name=""><br><br>
+            <label for="n">n: </label>
+            <input type="text" id="n" name=""><br><br>
+            <label for="Encrypted Password">Encrypted Password: </label>
+            <input type="text" id="encrypted_password" name="encrypted password"><br><br>
+            <button class="btn" id="submit" onclick="encrypt()">Encrypt</button>
+        </div>
+    </div>
+</body>
+
+</html>

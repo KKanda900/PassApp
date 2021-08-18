@@ -1,35 +1,42 @@
 <html>
 
 <head>
-  <title>Welcome Screen</title>
+  <title>Vault Screen</title>
 
-  <script type="text/javascript" src="main.js"></script>
   <link rel="stylesheet" href="main.css">
 
 </head>
 <body>
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="manager.html">Password Management</a>
-    <a href="createpass.html">Create a New Password</a>
-  </div>
-
-  <h1>Welcome to PassApp</h1>
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Options</span>
-  <div class="right_banner">
-    <p>Something</p>
-  </div>
-  <div class="center_banner">
-    <p>Something</p>
-  </div>
-  <div class="left_banner">
-    <p>Something</p>
-  </div>
-  <div class="left_banner">
-    <p>Something</p>
-  </div>
-  <div class="right_banner">
-    <p>Something</p>
+  <div class="wrapper">
+    <div class="sidebar">
+      <h2>PassApp</h2>
+      <ul>
+        <li><a href="main.html"><i class="The Vault"></i>The Vault</a></li>
+        <li><a href="generate.html"><i class="Generate Password"></i>Generate Password</a></li>
+        <li><a href="encrypt.html"><i class="Encrypt Password"></i>Encrypt Password</a></li>
+        <li><a href="decrypt.html"><i class="Decrypt Password"></i>Decrypt Password</a></li>
+      </ul>
+    </div>
+    <div class="main_content">
+      <h1>Saved Passwords</h1>
+      <script>
+        const fs = require('fs');
+        var text = fs.readFileSync("./User_Data.txt", "utf-8");
+        var extracted_data = text.split('\n').filter(n => n);
+        var list_view_style = ["rgb(110, 150, 224)", "#acb"]; var counter = 0;
+        while(extracted_data.length != 0){
+          var password = extracted_data.pop(0);
+          var username = extracted_data.pop(0);
+          var website_name = extracted_data.pop(0);
+          if (counter % 2 == 0){
+            document.write("<div class=\"row\"> <div class=\"column\" style=\"background-color:"+list_view_style[0]+";\"> <h2>"+website_name+"</h2> <p>"+username+"</p> <p>"+password+"</p> </div> </div>");
+          }
+          else {
+            document.write("<div class=\"row\"> <div class=\"column\" style=\"background-color:"+list_view_style[1]+";\"> <h2>"+website_name+"</h2> <p>"+username+"</p> <p>"+password+"</p> </div> </div>");
+          }
+          counter+=1;
+        }
+      </script>
   </div>
 </body>
 

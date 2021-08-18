@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Generate Password</title>
+
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>PassApp</h2>
+            <ul>
+                <li><a href="main.html"><i class="The Vault"></i>The Vault</a></li>
+                <li><a href="generate.html"><i class="Generate Password"></i>Generate Password</a></li>
+                <li><a href="encrypt.html"><i class="Encrypt Password"></i>Encrypt Password</a></li>
+                <li><a href="decrypt.html"><i class="Decrypt Password"></i>Decrypt Password</a></li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <h1 style="margin-bottom: 50px;">Generate Password</h1>
+            <label for="Website Name">Enter the Website Name: </label>
+            <input type="text" id="website" name="website_name"><br><br>
+            <label for="Username">Enter the Username: </label>
+            <input type="text" id="user" name="username"><br><br>
+            <label for="Password Length">Enter the Desired Password Length: </label>
+            <input type="text" id="length" name="password_length"><br><br>
+            <label for="Generated Password">Generated Password: </label>
+            <input type="text" id="password" name="password"><br><br>
+            <button class="btn" id="generate_password" onclick="generate()">Generate Password</button>
+            <button class="btn" id="save_password" onclick="savePassword()">Save Password</button> <br> <br>
+            <script type="text/javascript" src="generate.js"></script>
+        </div>
+    </div>
+</body>
+
+</html>
